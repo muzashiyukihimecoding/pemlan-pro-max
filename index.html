@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Manajemen Buku Perpustakaan</title>
+      <link rel="stylesheet" href="/assets/style.css" />
+   </head>
+   <body>
+      <div class="container">
+         <h1>Manajemen Buku Perpustakaan</h1>
+         <hr />
+
+         <p id="infoUpdate" class="info-update" style="display: none">
+            ✏️ Update data di sini!
+            <button type="button" id="batalUpdate" class="btn-cancel">
+               Batal
+            </button>
+         </p>
+
+         <form id="bookForm">
+            <input type="text" id="title" placeholder="Judul Buku" required />
+            <input type="text" id="author" placeholder="Penulis" required />
+            <input type="text" id="category" placeholder="Kategori" required />
+            <select id="type">
+               <option value="">-- Pilih Tipe --</option>
+               <option value="ebook">Ebook</option>
+               <option value="printed">Printed Book</option>
+            </select>
+            <button type="submit">Tambah Buku</button>
+         </form>
+
+         <div class="filter">
+            <input
+               type="text"
+               id="filterAuthor"
+               placeholder="Cari Berdasarkan Penulis"
+            />
+            <input
+               type="text"
+               id="filterCategory"
+               placeholder="Cari Berdasarkan Kategori"
+            />
+         </div>
+
+         <h3>Total Buku: <span id="totalBooks">0</span></h3>
+
+         <table>
+            <thead>
+               <tr>
+                  <th>Id Buku</th>
+                  <th>Judul</th>
+                  <th>Penulis</th>
+                  <th>Kategori</th>
+                  <th>Tipe</th>
+                  <th>Aksi</th>
+               </tr>
+            </thead>
+            <tbody id="bookTableBody"></tbody>
+         </table>
+      </div>
+      <!-- <hr /> -->
+
+      <script type="module" src="./main.js"></script>
+   </body>
+</html>

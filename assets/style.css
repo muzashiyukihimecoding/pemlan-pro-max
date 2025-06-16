@@ -1,0 +1,328 @@
+:root {
+   --primary-font: Montserrat, sans-serif;
+   --primary-color: #5a827e;
+}
+
+body {
+   font-family: Montserrat, sans-serif;
+   background: linear-gradient(
+         to right,
+         rgba(255, 255, 255, 0.7),
+         rgba(255, 255, 255, 0.65)
+      ),
+      url("/assets/background.png") no-repeat center center fixed;
+   background-size: cover;
+   color: #333;
+   padding: 30px;
+   hr {
+      color: var(--primary-color);
+   }
+}
+
+.container {
+   max-width: 800px;
+   margin: auto;
+   background: #ffffff;
+   padding: 25px 30px;
+   border-radius: 12px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+h1 {
+   text-align: center;
+   color: #5a827e;
+   margin-bottom: 25px;
+}
+
+/* Form */
+form input,
+form select,
+form button,
+.filter input {
+   width: 100%;
+   padding: 10px;
+   margin: 8px 0;
+   font-size: 1rem;
+   border: 1px solid #ccc;
+   border-radius: 6px;
+}
+
+form button {
+   background-color: #5a827e;
+   color: white;
+   border: none;
+   transition: background-color 0.3s ease;
+}
+
+form button:hover {
+   background-color: #476e6a;
+}
+
+/* Table */
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+}
+
+th {
+   text-align: center;
+   td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+   }
+}
+
+th {
+   background-color: #f0f0f0;
+}
+
+/* Buttons */
+button.edit-btn {
+   background-color: #d3d3d3;
+   color: #333;
+   border: none;
+   padding: 7px 12px;
+   border-radius: 6px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+button.edit-btn:hover {
+   background-color: #b9d4aa;
+}
+
+button.delete-btn {
+   background-color: crimson;
+   color: white;
+   border: none;
+   padding: 7px 12px;
+   border-radius: 6px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+button.delete-btn:hover {
+   background-color: #a00000;
+}
+
+/* Info Update Section */
+.info-update {
+   background-color: #fff3cd;
+   color: #856404;
+   padding: 12px;
+   border: 1px solid #ffeeba;
+   border-radius: 6px;
+   margin-top: 10px;
+   font-weight: bold;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.btn-cancel {
+   background-color: crimson;
+   color: white;
+   border: none;
+   padding: 6px 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.btn-cancel:hover {
+   background-color: #a00000;
+}
+
+/* Filter */
+.filter {
+   margin-top: 20px;
+   display: flex;
+   gap: 10px;
+} /* Base Reset */
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+/* Container with glass effect */
+.container {
+   max-width: 900px;
+   margin: auto;
+   background: rgba(255, 255, 255, 0.7);
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   border-radius: 16px;
+   padding: 30px 35px;
+   box-shadow: 0 8px 24px rgba(90, 130, 126, 0.2);
+   border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Heading */
+h1 {
+   text-align: center;
+   color: #5a827e;
+   font-size: 2.2rem;
+   margin-bottom: 25px;
+}
+
+/* Form Fields */
+form input,
+form select,
+form button,
+.filter input {
+   width: 100%;
+   padding: 12px 16px;
+   margin: 10px 0;
+   font-size: 1rem;
+   border: none;
+   border-radius: 12px;
+   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+   background-color: #fdfdfd;
+   transition: box-shadow 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+.filter input:focus {
+   outline: none;
+   box-shadow: 0 0 0 3px rgba(90, 130, 126, 0.3);
+}
+
+/* Submit Button */
+form button {
+   background: #5a827e;
+   color: white;
+   font-weight: bold;
+   letter-spacing: 0.5px;
+   cursor: pointer;
+   transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+   background: #3f6d6a;
+   transform: translateY(-2px);
+}
+
+/* Filter Row */
+.filter {
+   display: flex;
+   gap: 15px;
+   margin: 20px 0;
+}
+
+.filter input {
+   flex: 1;
+}
+
+/* Info Update Banner */
+.info-update {
+   background: rgba(255, 243, 205, 0.8);
+   color: #856404;
+   padding: 15px;
+   border: 1px solid #ffeeba;
+   border-radius: 10px;
+   font-weight: bold;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 15px 0;
+}
+
+/* Notification alert */
+.btn-cancel {
+   background-color: crimson;
+   color: white;
+   padding: 8px 14px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: background 0.3s, transform 0.2s;
+}
+
+.btn-cancel:hover {
+   background-color: #a00000;
+   transform: scale(1.05);
+}
+
+/* Table Styles */
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+   background-color: #fff;
+   border-radius: 12px;
+   overflow: hidden;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+th {
+   background-color: #e0f0ee;
+   color: #333;
+   text-align: left;
+   padding: 15px;
+   font-size: 1rem;
+}
+
+td {
+   padding: 15px;
+   border-top: 1px solid #eee;
+}
+
+tbody tr:hover {
+   background-color: #f2fefc;
+   transition: background-color 0.3s ease;
+}
+
+/* Action Buttons */
+.action-buttons {
+   display: flex;
+   gap: 0.5rem;
+   justify-content: center;
+   align-items: center;
+}
+
+button.edit-btn {
+   background-color: #d3d3d3;
+   color: #333;
+   padding: 8px 12px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: background-color 0.3s, transform 0.2s;
+}
+
+button.edit-btn:hover {
+   background-color: #b9d4aa;
+   transform: translateY(-1px);
+}
+
+button.delete-btn {
+   background-color: crimson;
+   color: white;
+   padding: 8px 12px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   margin-left: 8px;
+   transition: background-color 0.3s, transform 0.2s;
+}
+
+button.delete-btn:hover {
+   background-color: #a00000;
+   transform: scale(1.05);
+}
+
+/* Book Count */
+h3 {
+   margin-top: 10px;
+   color: #5a827e;
+}
+
+.filter input {
+   flex: 1;
+   border: 1px solid #ccc;
+}
