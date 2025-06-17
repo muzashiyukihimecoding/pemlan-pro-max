@@ -3,6 +3,12 @@
    --primary-color: #5a827e;
 }
 
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
 body {
    font-family: Montserrat, sans-serif;
    background: linear-gradient(
@@ -26,13 +32,19 @@ body {
    padding: 25px 30px;
    border-radius: 12px;
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+   div {
+      margin-bottom: 2rem;
+      h1 {
+         margin: 0;
+      }
+   }
 }
 
 /* Heading */
 h1 {
    text-align: center;
    color: #5a827e;
-   margin-bottom: 25px;
+   /* margin-bottom: 25px; */
 }
 
 /* Form */
@@ -142,11 +154,6 @@ button.delete-btn:hover {
    display: flex;
    gap: 10px;
 } /* Base Reset */
-* {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
-}
 
 /* Container with glass effect */
 .container {
@@ -273,8 +280,8 @@ td {
 }
 
 tbody tr:hover {
-   background-color: #f2fefc;
-   transition: background-color 0.3s ease;
+   /* background-color: #f2fefc; */
+   /* transition: background-color 0.3s ease; */
 }
 
 /* Action Buttons */
@@ -297,7 +304,8 @@ button.edit-btn {
 
 button.edit-btn:hover {
    background-color: #b9d4aa;
-   transform: translateY(-1px);
+   /* transform: translateY(-1px); */
+   transform: scale(1.05);
 }
 
 button.delete-btn {
