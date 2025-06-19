@@ -17,7 +17,7 @@ body {
          rgba(255, 255, 255, 0.7),
          rgba(255, 255, 255, 0.65)
       ),
-      url("./assets/background.png") no-repeat center center fixed;
+      url("./background.png") no-repeat center center fixed;
    background-size: cover;
    color: #333;
    padding: 30px;
