@@ -7,9 +7,10 @@
    </head>
    <body>
       <div class="container">
-         <div>
+         <div class="header">
             <!-- <h1>Manajemen Buku Perpustakaan</h1> -->
             <h1>Warren Mephory Library</h1>
+            <p>Developing Knowlegde and Wisdom</p>
          </div>
          <!-- <hr /> -->
 
@@ -45,23 +46,50 @@
             />
          </div>
 
-         <h3>Total Buku: <span id="totalBooks">0</span></h3>
+         <div class="book-counter">
+            <h3>📚Total Book: <span id="totalBooks">0</span></h3>
+            <p>
+               📗 E-book: <span id="totalEbooks">0</span> &nbsp;&nbsp; |
+               &nbsp;&nbsp; 📘 Printed Book: <span id="totalPrinted">0</span>
+            </p>
+         </div>
 
-         <table>
-            <thead>
-               <tr>
-                  <th>Id Buku</th>
-                  <th>Judul</th>
-                  <th>Penulis</th>
-                  <th>Kategori</th>
-                  <th>Tipe</th>
-                  <th>Aksi</th>
-               </tr>
-            </thead>
-            <tbody id="bookTableBody"></tbody>
-         </table>
+         <!-- div.table-container -->
+         <div class="table-container">
+            <table>
+               <thead>
+                  <tr>
+                     <th>Id Buku</th>
+                     <th>Judul</th>
+                     <th>Penulis</th>
+                     <th>Kategori</th>
+                     <th>Tipe</th>
+                     <th>Aksi</th>
+                  </tr>
+               </thead>
+               <tbody id="bookTableBody"></tbody>
+            </table>
+         </div>
       </div>
       <!-- <hr /> -->
+
+      <!-- <footer>
+         <p>&copy; 2025 Warren Mephory Library. All rights reserved.</p>
+      </footer> -->
+
+      <footer class="footer">
+         <div class="footer-content">
+            <p>
+               &copy; 2025 <strong>Warren Mephory Library</strong>. All rights
+               reserved.
+            </p>
+            <div class="footer-links">
+               <a href="#">Tentang Kami</a>
+               <a href="#">Kontak</a>
+               <a href="#">Kebijakan Privasi</a>
+            </div>
+         </div>
+      </footer>
 
       <script type="module" src="./scripts/main.js"></script>
    </body>

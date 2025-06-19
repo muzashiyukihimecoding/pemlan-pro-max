@@ -1,6 +1,7 @@
 :root {
    --primary-font: Montserrat, sans-serif;
    --primary-color: #5a827e;
+   --button-hover-1: #274543;
 }
 
 * {
@@ -32,13 +33,37 @@ body {
    padding: 25px 30px;
    border-radius: 12px;
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+   max-width: 900px;
+   margin: auto;
+   background: rgba(255, 255, 255, 0.7);
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   border-radius: 16px;
+   padding: 30px 35px;
+   box-shadow: 0 8px 24px rgba(90, 130, 126, 0.2);
+   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 /* Heading */
-h1 {
-   text-align: center;
-   color: #5a827e;
-   margin-bottom: 25px;
+.header {
+   h1 {
+      /* text-align: center;
+      color: #5a827e;
+      margin-bottom: 25px; */
+
+      text-align: center;
+      color: #5a827e;
+      font-size: 2.2rem;
+      margin-bottom: 0.8rem;
+   }
+
+   p {
+      text-align: center;
+      color: #5a827e;
+      margin-bottom: 25px;
+      margin-top: 0;
+   }
 }
 
 /* Form */
@@ -46,12 +71,23 @@ form input,
 form select,
 form button,
 .filter input {
-   width: 100%;
-   padding: 10px;
-   margin: 8px 0;
-   font-size: 1rem;
+   font-family: var(--primary-font);
+   /* width: 100%; */
+   /* padding: 10px; */
+   /* margin: 8px 0; */
+   /* font-size: 1rem; */
    border: 1px solid #ccc;
    border-radius: 6px;
+
+   width: 100%;
+   padding: 12px 16px;
+   margin: 10px 0;
+   font-size: 1rem;
+   border: none;
+   border-radius: 12px;
+   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+   background-color: #fdfdfd;
+   transition: box-shadow 0.3s ease;
 }
 
 form button {
@@ -144,14 +180,14 @@ button.delete-btn:hover {
 
 /* Filter */
 .filter {
-   margin-top: 20px;
-   display: flex;
-   gap: 10px;
+   /* margin-top: 20px; */
+   /* display: flex; */
+   /* gap: 10px; */
 }
 
 /* Container */
 .container {
-   max-width: 900px;
+   /* max-width: 900px;
    margin: auto;
    background: rgba(255, 255, 255, 0.7);
    backdrop-filter: blur(12px);
@@ -159,15 +195,15 @@ button.delete-btn:hover {
    border-radius: 16px;
    padding: 30px 35px;
    box-shadow: 0 8px 24px rgba(90, 130, 126, 0.2);
-   border: 1px solid rgba(255, 255, 255, 0.4);
+   border: 1px solid rgba(255, 255, 255, 0.4); */
 }
 
 /* Heading */
 h1 {
-   text-align: center;
+   /* text-align: center;
    color: #5a827e;
    font-size: 2.2rem;
-   margin-bottom: 25px;
+   margin-bottom: 25px; */
 }
 
 /* Form Fields */
@@ -175,7 +211,7 @@ form input,
 form select,
 form button,
 .filter input {
-   width: 100%;
+   /* width: 100%;
    padding: 12px 16px;
    margin: 10px 0;
    font-size: 1rem;
@@ -183,7 +219,7 @@ form button,
    border-radius: 12px;
    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
    background-color: #fdfdfd;
-   transition: box-shadow 0.3s ease;
+   transition: box-shadow 0.3s ease; */
 }
 
 form input:focus,
@@ -195,6 +231,7 @@ form select:focus,
 
 /* Submit Button */
 form button {
+   font-family: var(--primary-font);
    background: #5a827e;
    color: white;
    font-weight: bold;
@@ -204,19 +241,24 @@ form button {
 }
 
 form button:hover {
-   background: #3f6d6a;
-   transform: translateY(-2px);
+   background: var(--button-hover-1);
+   transform: translateY(4px);
 }
 
 /* Filter Row */
 .filter {
    display: flex;
-   gap: 15px;
+   gap: 10px;
    margin: 20px 0;
+   @media screen and (max-width: 768px) {
+      flex-direction: column;
+   }
 }
 
 .filter input {
    flex: 1;
+   padding: 0.5rem 1rem;
+   margin: 0.5rem auto;
 }
 
 /* Info Update Banner */
@@ -250,6 +292,16 @@ form button:hover {
 }
 
 /* Table Styles */
+.table-container {
+   overflow-x: auto;
+   width: 100%;
+   margin-top: 1rem;
+   table {
+      min-width: 720ox;
+      border-collapse: collapse;
+   }
+}
+
 table {
    width: 100%;
    border-collapse: collapse;
@@ -318,12 +370,51 @@ button.delete-btn:hover {
 }
 
 /* Book Count */
-h3 {
-   margin-top: 10px;
-   color: #5a827e;
+.book-counter {
+   h3,
+   p {
+      margin-top: 10px;
+      color: #5a827e;
+   }
 }
 
 .filter input {
    flex: 1;
    border: 1px solid #ccc;
+}
+
+/* footer {
+   margin-top: 20px;
+   text-align: center;
+} */
+
+.footer {
+   background-color: rgba(255, 255, 255, 0.85);
+   border-top: 1px solid #ccc;
+   padding: 20px 10px;
+   text-align: center;
+   font-size: 14px;
+   color: #555;
+   margin-top: 40px;
+}
+
+.footer-content {
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.footer-links {
+   margin-top: 10px;
+}
+
+.footer-links a {
+   color: #4a7c7c;
+   margin: 0 10px;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+   color: var(--button-hover-1, #274543);
+   text-decoration: underline;
 }

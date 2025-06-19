@@ -79,6 +79,10 @@ function renderTable() {
    const filterC = filterCategory.value.trim().toLowerCase();
 
    tbody.innerHTML = "";
+   let total = 0;
+   let totalEbooks = 0;
+   let totalPrinted = 0;
+
    bookList.forEach((book, index) => {
       if (
          (!filterA || book.author.toLowerCase().includes(filterA)) &&
@@ -125,10 +129,16 @@ function renderTable() {
          };
 
          tbody.appendChild(tr);
+         total++;
+
+         if (book.type === "Ebook") totalEbooks++;
+         if (book.type === "Printed Book") totalPrinted++;
       }
    });
 
    totalEl.textContent = bookList.length;
+   document.getElementById("totalEbooks").textContent = totalEbooks;
+   document.getElementById("totalPrinted").textContent = totalPrinted;
 }
 
 filterAuthor.addEventListener("input", renderTable);
