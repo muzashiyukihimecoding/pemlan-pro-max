@@ -3,6 +3,12 @@
    --primary-color: #5a827e;
 }
 
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
 body {
    font-family: Montserrat, sans-serif;
    background: linear-gradient(
@@ -141,15 +147,9 @@ button.delete-btn:hover {
    margin-top: 20px;
    display: flex;
    gap: 10px;
-} /* Base Reset */
-
-* {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
 }
 
-/* Container with glass effect */
+/* Container */
 .container {
    max-width: 900px;
    margin: auto;
