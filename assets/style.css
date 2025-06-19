@@ -121,7 +121,7 @@ th {
    background-color: #f0f0f0;
 }
 
-/* Buttons */
+/* Buttons
 button.edit-btn {
    background-color: #d3d3d3;
    color: #333;
@@ -148,7 +148,7 @@ button.delete-btn {
 
 button.delete-btn:hover {
    background-color: #a00000;
-}
+} */
 
 /* Info Update Section */
 .info-update {
@@ -248,16 +248,17 @@ form button:hover {
 /* Filter Row */
 .filter {
    display: flex;
-   gap: 10px;
+   gap: 1.5rem;
    margin: 20px 0;
    @media screen and (max-width: 768px) {
       flex-direction: column;
+      gap: 0.5rem;
    }
 }
 
 .filter input {
    flex: 1;
-   padding: 0.5rem 1rem;
+   /* padding: 0.5rem 1rem; */
    margin: 0.5rem auto;
 }
 
@@ -297,7 +298,7 @@ form button:hover {
    width: 100%;
    margin-top: 1rem;
    table {
-      min-width: 720ox;
+      min-width: 900px;
       border-collapse: collapse;
    }
 }
@@ -308,7 +309,7 @@ table {
    margin-top: 20px;
    background-color: #fff;
    border-radius: 12px;
-   overflow: hidden;
+   /* overflow: hidden; */
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -326,7 +327,7 @@ td {
 }
 
 tbody tr:hover {
-   background-color: #f2fefc;
+   /* background-color: #f2fefc; */
    transition: background-color 0.3s ease;
 }
 
@@ -336,6 +337,15 @@ tbody tr:hover {
    gap: 0.5rem;
    justify-content: center;
    align-items: center;
+}
+
+.edit-alert,
+.edit-alert p {
+   display: flex;
+   gap: 0.5rem;
+   justify-content: center;
+   /* align-items: center; */
+   flex-direction: column;
 }
 
 button.edit-btn {
@@ -350,7 +360,7 @@ button.edit-btn {
 
 button.edit-btn:hover {
    background-color: #b9d4aa;
-   transform: translateY(-1px);
+   transform: scale(1.05);
 }
 
 button.delete-btn {
@@ -388,6 +398,7 @@ button.delete-btn:hover {
    text-align: center;
 } */
 
+/* Footer */
 .footer {
    background-color: rgba(255, 255, 255, 0.85);
    border-top: 1px solid #ccc;

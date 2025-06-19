@@ -14,12 +14,14 @@
          </div>
          <!-- <hr /> -->
 
-         <p id="infoUpdate" class="info-update" style="display: none">
-            ✏️ Update data di sini!
-            <button type="button" id="batalUpdate" class="btn-cancel">
-               Batal
-            </button>
-         </p>
+         <div class="edit-alert">
+            <p id="infoUpdate" class="info-update" style="display: none">
+               ✏️ Update data di sini!
+               <button type="button" id="batalUpdate" class="btn-cancel">
+                  Batal
+               </button>
+            </p>
+         </div>
 
          <form id="bookForm">
             <input type="text" id="title" placeholder="Judul Buku" required />
@@ -46,14 +48,6 @@
             />
          </div>
 
-         <div class="book-counter">
-            <h3>📚Total Book: <span id="totalBooks">0</span></h3>
-            <p>
-               📗 E-book: <span id="totalEbooks">0</span> &nbsp;&nbsp; |
-               &nbsp;&nbsp; 📘 Printed Book: <span id="totalPrinted">0</span>
-            </p>
-         </div>
-
          <!-- div.table-container -->
          <div class="table-container">
             <table>
@@ -69,6 +63,14 @@
                </thead>
                <tbody id="bookTableBody"></tbody>
             </table>
+         </div>
+
+         <div class="book-counter">
+            <h3>📚Total Book: <span id="totalBooks">0</span></h3>
+            <p>
+               📗 E-book: <span id="totalEbooks">0</span> &nbsp;&nbsp; |
+               &nbsp;&nbsp; 📘 Printed Book: <span id="totalPrinted">0</span>
+            </p>
          </div>
       </div>
       <!-- <hr /> -->
