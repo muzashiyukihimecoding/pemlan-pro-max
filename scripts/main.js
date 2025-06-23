@@ -149,3 +149,14 @@ cancelBtn.addEventListener("click", () => {
    form.querySelector("button").textContent = "Tambah Buku";
    infoUpdate.style.display = "none";
 });
+
+// Function untuk Pencarian Buku (Filter)
+const toggleButton = document.getElementById("toggleFilter");
+const filterSection = document.querySelector(".filter");
+
+toggleButton.addEventListener("click", () => {
+   // const isVisible = filterSection.classList.contains("active");
+   // filterSection.style.display = isVisible ? "none" : "block";
+   const isVisible = filterSection.style.display === "flex";
+   filterSection.style.display = isVisible ? "none" : "flex";
+});

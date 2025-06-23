@@ -8,10 +8,10 @@
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+   font-family: Montserrat, sans-serif;
 }
 
 body {
-   font-family: Montserrat, sans-serif;
    background: linear-gradient(
          to right,
          rgba(255, 255, 255, 0.7),
@@ -238,6 +238,7 @@ form button {
    letter-spacing: 0.5px;
    cursor: pointer;
    transition: background 0.3s, transform 0.2s;
+   /* box-shadow: outset 0 2px 4px rgba(0, 0, 0, 0.2); */
 }
 
 form button:hover {
@@ -248,7 +249,8 @@ form button:hover {
 /* Filter Row */
 .filter {
    display: flex;
-   gap: 1.5rem;
+   /* flex-wrap: wrap; */
+   gap: 1rem;
    margin: 20px 0;
    @media screen and (max-width: 768px) {
       flex-direction: column;
@@ -260,6 +262,40 @@ form button:hover {
    flex: 1;
    /* padding: 0.5rem 1rem; */
    margin: 0.5rem auto;
+}
+
+/* Activate Toggle Filter */
+#toggleFilter {
+   cursor: pointer;
+   margin-top: 1rem;
+   padding: 10px 1rem;
+   font-size: 14px;
+   background-color: var(--primary-color);
+   color: white;
+   border: none;
+   border-radius: 10px;
+   transition: background 0.3s, transform 0.2s;
+}
+
+#toggleFilter:hover {
+   background-color: var(--button-hover-1);
+   transform: translateY(4px);
+}
+
+#filter-section {
+   display: none;
+   gap: 1rem;
+   margin: 20px 0;
+   flex-wrap: wrap;
+   transition: opacity 0.3s ease;
+   @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+}
+
+#filter-section.show {
+   opacity: 1;
 }
 
 /* Info Update Banner */
@@ -407,6 +443,9 @@ button.delete-btn:hover {
    font-size: 14px;
    color: #555;
    margin-top: 40px;
+   display: flex;
+   flex-direction: row;
+   /* align-items: center; */
 }
 
 .footer-content {
@@ -428,4 +467,9 @@ button.delete-btn:hover {
 .footer-links a:hover {
    color: var(--button-hover-1, #274543);
    text-decoration: underline;
+}
+
+footer .logos {
+   margin: 0 10px;
+   /* : 2rem; */
 }

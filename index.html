@@ -4,6 +4,7 @@
       <meta charset="UTF-8" />
       <title>Manajemen Buku Perpustakaan</title>
       <link rel="stylesheet" href="./assets/style.css" />
+      <link rel="icon" href="./assets/classical books.png" />
    </head>
    <body>
       <div class="container">
@@ -35,7 +36,15 @@
             <button type="submit">Tambah Buku</button>
          </form>
 
-         <div class="filter">
+         <!-- Button Pencarian Buku -->
+         <button id="toggleFilter">🔍 Cari Buku</button>
+
+         <div class="filter" id="filter-section">
+            <input
+               type="text"
+               id="searchTitle"
+               placeholder="Cari Berdasarkan Judul"
+            />
             <input
                type="text"
                id="filterAuthor"
@@ -80,6 +89,9 @@
       </footer> -->
 
       <footer class="footer">
+         <div class="logos">
+            <!-- <img src="./assets/classical books.png" alt="Classic Mephory" /> -->
+         </div>
          <div class="footer-content">
             <p>
                &copy; 2025 <strong>Warren Mephory Library</strong>. All rights
@@ -90,6 +102,9 @@
                <a href="#">Kontak</a>
                <a href="#">Kebijakan Privasi</a>
             </div>
+         </div>
+         <div class="logos">
+            <!-- <img src="./assets/classical books.png" alt="Classic Mephory" /> -->
          </div>
       </footer>
 
