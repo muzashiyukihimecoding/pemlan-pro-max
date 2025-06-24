@@ -7,83 +7,94 @@
       <link rel="icon" href="./assets/classical books.png" />
    </head>
    <body>
-      <div class="container">
-         <div class="header">
-            <!-- <h1>Manajemen Buku Perpustakaan</h1> -->
-            <h1>Warren Mephory Library</h1>
-            <p>Developing Knowlegde and Wisdom</p>
-         </div>
-         <!-- <hr /> -->
+      <main class="content">
+         <div class="container">
+            <div class="header">
+               <!-- <h1>Manajemen Buku Perpustakaan</h1> -->
+               <h1>Warren Mephory Library</h1>
+               <p>Developing Knowlegde and Wisdom</p>
+            </div>
+            <!-- <hr /> -->
 
-         <div class="edit-alert">
-            <p id="infoUpdate" class="info-update" style="display: none">
-               ✏️ Update data di sini!
-               <button type="button" id="batalUpdate" class="btn-cancel">
-                  Batal
-               </button>
-            </p>
-         </div>
+            <div class="edit-alert" id="editAlert">
+               <p id="infoUpdate" class="info-update" style="display: none">
+                  ✏️ Update data di sini!
+                  <button type="button" id="batalUpdate" class="btn-cancel">
+                     Batal
+                  </button>
+               </p>
+            </div>
 
-         <form id="bookForm">
-            <input type="text" id="title" placeholder="Judul Buku" required />
-            <input type="text" id="author" placeholder="Penulis" required />
-            <input type="text" id="category" placeholder="Kategori" required />
-            <select id="type">
-               <option value="">-- Pilih Tipe --</option>
-               <option value="ebook">Ebook</option>
-               <option value="printed">Printed Book</option>
-            </select>
-            <button type="submit">Tambah Buku</button>
-         </form>
+            <form id="bookForm">
+               <input
+                  type="text"
+                  id="title"
+                  placeholder="Judul Buku"
+                  required
+               />
+               <input type="text" id="author" placeholder="Penulis" required />
+               <input
+                  type="text"
+                  id="category"
+                  placeholder="Kategori"
+                  required
+               />
+               <select id="type">
+                  <option value="">-- Pilih Tipe --</option>
+                  <option value="ebook">Ebook</option>
+                  <option value="printed">Printed Book</option>
+               </select>
+               <button type="submit">Tambah Buku</button>
+            </form>
 
-         <!-- Button Pencarian Buku -->
-         <button id="toggleFilter">🔍 Cari Buku</button>
+            <!-- Button Pencarian Buku -->
+            <button id="toggleFilter">🔍 Cari Buku</button>
 
-         <div class="filter" id="filter-section">
-            <input
+            <div class="filter" id="filter-section">
+               <!-- <input
                type="text"
                id="searchTitle"
                placeholder="Cari Berdasarkan Judul"
-            />
-            <input
-               type="text"
-               id="filterAuthor"
-               placeholder="Cari Berdasarkan Penulis"
-            />
-            <input
-               type="text"
-               id="filterCategory"
-               placeholder="Cari Berdasarkan Kategori"
-            />
-         </div>
+            /> -->
+               <input
+                  type="text"
+                  id="filterAuthor"
+                  placeholder="Cari Berdasarkan Penulis"
+               />
+               <input
+                  type="text"
+                  id="filterCategory"
+                  placeholder="Cari Berdasarkan Kategori"
+               />
+            </div>
 
-         <!-- div.table-container -->
-         <div class="table-container">
-            <table>
-               <thead>
-                  <tr>
-                     <th>Id Buku</th>
-                     <th>Judul</th>
-                     <th>Penulis</th>
-                     <th>Kategori</th>
-                     <th>Tipe</th>
-                     <th>Aksi</th>
-                  </tr>
-               </thead>
-               <tbody id="bookTableBody"></tbody>
-            </table>
-         </div>
+            <!-- div.table-container -->
+            <div class="table-container">
+               <table>
+                  <thead>
+                     <tr>
+                        <th>ID</th>
+                        <th>Judul</th>
+                        <th>Penulis</th>
+                        <th>Kategori</th>
+                        <th>Tipe</th>
+                        <th>Aksi</th>
+                     </tr>
+                  </thead>
+                  <tbody id="bookTableBody"></tbody>
+               </table>
+            </div>
 
-         <div class="book-counter">
-            <h3>📚Total Book: <span id="totalBooks">0</span></h3>
-            <p>
-               📗 E-book: <span id="totalEbooks">0</span> &nbsp;&nbsp; |
-               &nbsp;&nbsp; 📘 Printed Book: <span id="totalPrinted">0</span>
-            </p>
+            <div class="book-counter">
+               <h3>📚Total Book: <span id="totalBooks">0</span></h3>
+               <p>
+                  📗 E-book: <span id="totalEbooks">0</span> &nbsp;&nbsp; |
+                  &nbsp;&nbsp; 📘 Printed Book: <span id="totalPrinted">0</span>
+               </p>
+            </div>
          </div>
-      </div>
-      <!-- <hr /> -->
-
+         <!-- <hr /> -->
+      </main>
       <!-- <footer>
          <p>&copy; 2025 Warren Mephory Library. All rights reserved.</p>
       </footer> -->

@@ -7,6 +7,7 @@ let editIndex = null;
 const form = document.getElementById("bookForm");
 const tbody = document.getElementById("bookTableBody");
 const totalEl = document.getElementById("totalBooks");
+const searchTitle = document.getElementById("searchTitle");
 const filterAuthor = document.getElementById("filterAuthor");
 const filterCategory = document.getElementById("filterCategory");
 const infoUpdate = document.getElementById("infoUpdate");
@@ -72,9 +73,17 @@ form.addEventListener("submit", (e) => {
 
    form.reset();
    renderTable();
+
+   setTimeout(() => {
+      document
+         .getElementById("totalPrinted")
+         .scrollIntoView({ behavior: "smooth" });
+   }, 50);
 });
 
+// Form Result
 function renderTable() {
+   const searchT = searchTitle.value.trim().toLowerCase();
    const filterA = filterAuthor.value.trim().toLowerCase();
    const filterC = filterCategory.value.trim().toLowerCase();
 
@@ -85,6 +94,7 @@ function renderTable() {
 
    bookList.forEach((book, index) => {
       if (
+         (!searchT || book.title.toLowerCase().includes(searchT)) &&
          (!filterA || book.author.toLowerCase().includes(filterA)) &&
          (!filterC || book.category.toLowerCase().includes(filterC))
       ) {
@@ -116,6 +126,13 @@ function renderTable() {
             form.querySelector("button").textContent = "Simpan Perubahan";
             infoUpdate.style.display = "block";
             editIndex = index;
+
+            // Smooth scroll to form for editing book informations
+            setTimeout(() => {
+               document
+                  .getElementById("editAlert")
+                  .scrollIntoView({ behavior: "smooth" });
+            }, 50);
          };
 
          tr.querySelector(".delete-btn").onclick = () => {

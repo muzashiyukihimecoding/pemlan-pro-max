@@ -11,6 +11,10 @@
    font-family: Montserrat, sans-serif;
 }
 
+html {
+   scroll-behavior: smooth;
+}
+
 body {
    background: linear-gradient(
          to right,
@@ -21,20 +25,25 @@ body {
    background-size: cover;
    color: #333;
    padding: 30px;
+   flex: 1;
    hr {
       color: var(--primary-color);
    }
 }
 
+main {
+   flex: 1;
+}
+
 .container {
-   max-width: 900px;
-   margin: auto;
+   /* max-width: 900px; */
+   /* margin: auto; */
    background: #ffffff;
    padding: 25px 30px;
-   border-radius: 12px;
+   /* border-radius: 12px; */
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 
-   max-width: 900px;
+   max-width: 980px;
    margin: auto;
    background: rgba(255, 255, 255, 0.7);
    backdrop-filter: blur(12px);
@@ -243,7 +252,7 @@ form button {
 
 form button:hover {
    background: var(--button-hover-1);
-   transform: translateY(4px);
+   transform: translateY(3px);
 }
 
 /* Filter Row */
@@ -262,10 +271,14 @@ form button:hover {
    flex: 1;
    /* padding: 0.5rem 1rem; */
    margin: 0.5rem auto;
+   border: 1px solid #ccc;
 }
 
 /* Activate Toggle Filter */
 #toggleFilter {
+   display: flexbox;
+   justify-content: flex-end;
+   /* width: 100%; */
    cursor: pointer;
    margin-top: 1rem;
    padding: 10px 1rem;
@@ -274,12 +287,13 @@ form button:hover {
    color: white;
    border: none;
    border-radius: 10px;
-   transition: background 0.3s, transform 0.2s;
+   /* align-items: right; */
+   transition: background 0.3s, transform 0.3s;
 }
 
 #toggleFilter:hover {
    background-color: var(--button-hover-1);
-   transform: translateY(4px);
+   transform: translateY(3px);
 }
 
 #filter-section {
@@ -352,7 +366,8 @@ table {
 th {
    background-color: #e0f0ee;
    color: #333;
-   text-align: left;
+   /* text-align: left; */
+   text-align: center;
    padding: 15px;
    font-size: 1rem;
 }
@@ -360,6 +375,7 @@ th {
 td {
    padding: 15px;
    border-top: 1px solid #eee;
+   font-size: 14px;
 }
 
 tbody tr:hover {
@@ -424,11 +440,6 @@ button.delete-btn:hover {
    }
 }
 
-.filter input {
-   flex: 1;
-   border: 1px solid #ccc;
-}
-
 /* footer {
    margin-top: 20px;
    text-align: center;
@@ -446,6 +457,9 @@ button.delete-btn:hover {
    display: flex;
    flex-direction: row;
    /* align-items: center; */
+   /* position: fixed;
+   bottom: 0;
+   width: 100%; */
 }
 
 .footer-content {
