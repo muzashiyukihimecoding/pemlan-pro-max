@@ -148,7 +148,7 @@ function renderTable() {
          tbody.appendChild(tr);
          total++;
 
-         if (book.type === "E-book") totalEbooks++;
+         if (book.type === "Ebook") totalEbooks++;
          if (book.type === "Printed Book") totalPrinted++;
       }
    });
