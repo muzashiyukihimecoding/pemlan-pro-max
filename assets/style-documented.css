@@ -1,0 +1,309 @@
+/* =====================================
+   Root Variables for Design Consistency
+====================================== */
+:root {
+   --primary-font: Montserrat, sans-serif; /* Font utama untuk seluruh website */
+   --primary-color: #5a827e; /* Warna utama untuk heading, tombol, dsb */
+   --button-hover-1: #274543; /* Warna tombol saat hover */
+}
+
+/* =====================================
+   Reset Default Styles and Base Font
+====================================== */
+* {
+   box-sizing: border-box; /* Menjamin padding dan border masuk ke dalam ukuran elemen */
+   margin: 0; /* Menghilangkan margin default */
+   padding: 0; /* Menghilangkan padding default */
+   font-family: var(--primary-font); /* Menggunakan font utama secara global */
+}
+
+html {
+   scroll-behavior: smooth; /* Scroll lembut saat navigasi anchor */
+}
+
+body {
+   background: linear-gradient(
+         to right,
+         rgba(255, 255, 255, 0.7),
+         rgba(255, 255, 255, 0.65)
+      ),
+      url("./background.png") no-repeat center center fixed; /* Background dengan gradasi dan gambar */
+   background-size: cover; /* Menutupi seluruh layar */
+   color: #333; /* Warna teks utama */
+   padding: 30px; /* Spasi dalam body */
+   flex: 1; /* Membuat body fleksibel di layout flex */
+}
+
+main {
+   flex: 1; /* Memungkinkan <main> mengisi ruang tersisa dan berguna agar <main> menyesuaikan diri secara fleksibel*/
+}
+
+/* =============================
+   Kontainer Utama Halaman
+============================= */
+.container {
+   max-width: 980px; /* Lebar maksimum konten */
+   margin: auto; /* Pusat secara horizontal */
+   background: rgba(255, 255, 255, 0.7); /* Latar putih transparan */
+   backdrop-filter: blur(12px); /* Efek blur latar belakang */
+   -webkit-backdrop-filter: blur(
+      12px
+   ); /* Membuat tampilan gambar menjadi sedikit blur */
+   border-radius: 16px; /* Sudut membulat */
+   padding: 30px 35px; /* Ruang dalam kontainer */
+   box-shadow: 0 8px 24px rgba(90, 130, 126, 0.2); /* Efek bayangan halus */
+   border: 1px solid rgba(255, 255, 255, 0.4); /* Border putih semi-transparan */
+}
+
+/* =============================
+   Header and Title
+============================= */
+h1 {
+   text-align: center; /* Posisi tengah */
+   color: var(--primary-color); /* Warna dari variabel */
+   font-size: 2.2rem; /* Ukuran besar */
+   margin-bottom: 1rem; /* Jarak bawah */
+}
+
+.header p {
+   text-align: center; /* Posisi tengah */
+   color: var(--primary-color); /* Warna dari variabel */
+   margin-bottom: 1.5rem; /* Jarak bawah */
+   margin-top: 0; /* Jarak atas */
+}
+
+/* =============================
+   Input Forms
+============================= */
+form input,
+form select,
+form button,
+.filter input {
+   font-family: var(--primary-font);
+   width: 100%;
+   padding: 12px 16px;
+   margin: 10px 0;
+   font-size: 1rem;
+   border: none;
+   border-radius: 12px;
+   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+   background-color: #fdfdfd;
+   transition: box-shadow 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+.filter input:focus {
+   outline: none;
+   box-shadow: 0 0 0 3px rgba(90, 130, 126, 0.3); /* Sorotan saat fokus */
+}
+
+form button {
+   background: var(--primary-color);
+   color: white;
+   font-weight: bold;
+   letter-spacing: 0.5px;
+   cursor: pointer;
+   transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+   background: var(--button-hover-1);
+   transform: translateY(3px);
+}
+
+/* =============================
+   Toggle Filter
+============================= */
+.filter {
+   display: flex;
+   gap: 1rem;
+   margin: 20px 0;
+}
+
+#toggleFilter {
+   cursor: pointer;
+   margin-top: 1rem;
+   padding: 10px 1rem;
+   font-size: 14px;
+   background-color: var(--primary-color);
+   color: white;
+   border: none;
+   border-radius: 10px;
+   transition: background 0.3s, transform 0.3s;
+}
+
+#toggleFilter:hover {
+   background-color: var(--button-hover-1);
+   transform: translateY(3px);
+}
+
+#filter-section {
+   display: none;
+   gap: 1rem;
+   margin: 20px 0;
+   flex-wrap: wrap;
+}
+
+#filter-section.show {
+   opacity: 1; /* Menjadikan elemen sepenuhnya tampak dan 
+               dipakai untuk efek transisi halus ketika elemen muncul. */
+}
+
+/* =============================
+   Update Notification - Edit
+============================= */
+.info-update {
+   background: rgba(255, 243, 205, 0.8);
+   color: #856404;
+   padding: 15px;
+   border: 1px solid #ffeeba;
+   border-radius: 10px;
+   font-weight: bold;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 15px 0;
+}
+
+/* Cancel Editing Button */
+.btn-cancel {
+   background-color: crimson;
+   color: white;
+   padding: 8px 14px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: background 0.3s, transform 0.2s;
+}
+
+.btn-cancel:hover {
+   background-color: #a00000;
+   transform: scale(1.05);
+}
+
+/* =============================
+   Tabels
+============================= */
+.table-container {
+   overflow-x: auto;
+   width: 100%;
+   margin-top: 1rem;
+}
+
+.table-container table,
+table {
+   min-width: 800px;
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 20px;
+   background-color: #fff;
+   border-radius: 12px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+th {
+   /* untuk bagian ID, Judul, Penulis dll */
+   background-color: #e0f0ee;
+   color: #333;
+   text-align: center;
+   padding: 15px;
+   font-size: 1rem;
+}
+
+td {
+   /* isi dari tabel*/
+   padding: 15px;
+   border-top: 1px solid #eee;
+   font-size: 14px;
+}
+
+tbody tr:hover {
+   transition: background-color 0.3s ease;
+}
+
+/* =============================
+   Action Buttons
+============================= */
+.action-buttons {
+   display: flex;
+   gap: 0.5rem;
+   justify-content: center;
+   align-items: center;
+}
+
+button.edit-btn {
+   background-color: #d3d3d3;
+   color: #333;
+   padding: 8px 12px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: background-color 0.3s, transform 0.2s;
+}
+
+button.edit-btn:hover {
+   background-color: #b9d4aa;
+   transform: scale(1.05);
+}
+
+button.delete-btn {
+   background-color: crimson;
+   color: white;
+   padding: 8px 12px;
+   border: none;
+   border-radius: 8px;
+   cursor: pointer;
+   margin-left: 8px;
+   transition: background-color 0.3s, transform 0.2s;
+}
+
+button.delete-btn:hover {
+   background-color: #a00000;
+   transform: scale(1.05);
+}
+
+/* =============================
+   Book Counter
+============================= */
+.book-counter h3,
+.book-counter p {
+   margin-top: 10px;
+   color: var(--primary-color);
+}
+
+/* =============================
+   Page Footer
+============================= */
+.footer {
+   background-color: rgba(255, 255, 255, 0.85);
+   border-top: 1px solid #ccc;
+   padding: 20px 10px;
+   text-align: center;
+   font-size: 14px;
+   color: #555;
+   margin-top: 40px;
+   display: flex;
+   flex-direction: row;
+}
+
+.footer-content {
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.footer-links {
+   margin-top: 10px;
+}
+
+.footer-links a {
+   color: #4a7c7c;
+   margin: 0 10px;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+   color: var(--button-hover-1);
+   text-decoration: underline;
+}
